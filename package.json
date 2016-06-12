@@ -1,0 +1,29 @@
+{
+  "name": "relative-date-reverse",
+  "version": "0.0.0",
+  "description": "My tiptop module",
+  "license": "MIT",
+  "repository": "icyflame/relative-date-reverse",
+  "author": {
+    "name": "Siddharth Kannan",
+    "email": "siddharthkannan@protonmail.com",
+    "url": "icyflame.github.io"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "semistandard && mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "semistandard": "6.1.1"
+  }
+}
