@@ -17,10 +17,8 @@ module.exports = function (str) {
     'day after tomorrow': +2 * dayMilliSeconds
   };
 
-  for (var i in specialStrings) {
-    if (str === i) {
-      return [true, new Date(new Date().getTime() + specialStrings[i])];
-    }
+  if (specialStrings.hasOwnProperty(str)) {
+    return [true, new Date(new Date().getTime() + specialStrings[str])];
   }
 
   // check for the most common regexes
