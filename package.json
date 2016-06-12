@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "semistandard && mocha"
+    "test": "semistandard && ava"
   },
   "files": [
     "index.js"
@@ -23,7 +23,13 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "mocha": "*",
-    "semistandard": "6.1.1"
+    "ava": "^0.15.2",
+    "dateable": "^1.0.1",
+    "semistandard": "*"
+  },
+  "semistandard": {
+    "ignore": [
+      "test.js"
+    ]
   }
 }
