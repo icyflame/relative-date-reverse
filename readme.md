@@ -1,6 +1,6 @@
 # relative-date-reverse
 
-> My tiptop module
+> Convert from commonly used relative date strings like `yesterday` and `tomorrow` to `Date` objects
 
 [![Build Status](https://travis-ci.org/icyflame/relative-date-reverse.svg?branch=master)](https://travis-ci.org/icyflame/relative-date-reverse)
 
@@ -18,30 +18,30 @@ $ npm install --save relative-date-reverse
 ```js
 var relativeDateReverse = require('relative-date-reverse');
 
-relativeDateReverse('unicorns');
-//=> unicorns & rainbows
+// if you run this on 12th June, 2016
+relativeDateReverse('yesterday');
+//=> [true, new Date('2016-06-11')]
+
+relativeDateReverse('some days ago');
+//=> [false, '']
 ```
 
 
 ## API
 
-### relativeDateReverse(input, [options])
+### relativeDateReverse(input)
 
 #### input
 
 *Required*  
 Type: `string`
 
-Lorem ipsum.
+The relative date string to be parsed. (Can be anything like `yesterday`, `day before yesterday`, `4 days ago`, etc)
 
-#### options
 
-##### foo
+## TODO
 
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
+- [ ] Incorporate support for `#{n} (days|weeks|months|years) ago`
 
 
 ## License
