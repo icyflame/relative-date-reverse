@@ -1,0 +1,5 @@
+{
+    "re1": "([0-9]+) (day?|week?|month?|year?)(:?s)? ago",
+    "re2": "(?:last|previous) (Mon|Tue(s)?|Wed(nes)?|Thurs|Fri|Sat(ur)?|Sun)(?:day)?$",
+    "re3": "([0-9]+)(?:th)? (Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sept(ember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)$"
+}
