@@ -2,6 +2,7 @@ import test from 'ava';
 var relative = require('./');
 var dateable = require('dateable');
 var day = 24 * 60 * 60 * 1000;
+var week = 7 * day;
 
 test('unformattable returns false', t => {
 	var returned = relative('some days ago');
@@ -41,6 +42,16 @@ test('re1 works: n days ago', t => {
 
 	var returned = relative("5 days ago")
 	var expected = new Date(new Date().getTime() - 5 * day);
+
+	t.true(returned[0]);
+	t.true(dateable(returned[1], 'YYYY-MM-DD') === dateable(expected, 'YYYY-MM-DD'));
+
+});
+
+test('re1 works: n weeks ago', t => {
+
+	var returned = relative("5 weeks ago")
+	var expected = new Date(new Date().getTime() - 5 * week);
 
 	t.true(returned[0]);
 	t.true(dateable(returned[1], 'YYYY-MM-DD') === dateable(expected, 'YYYY-MM-DD'));
