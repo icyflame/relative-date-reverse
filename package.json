@@ -1,6 +1,6 @@
 {
   "name": "relative-date-reverse",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Convert from commonly used relative date strings like `yesterday` and `tomorrow` to `Date` objects",
   "license": "MIT",
   "repository": "icyflame/relative-date-reverse",
