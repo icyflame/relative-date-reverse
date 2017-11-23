@@ -16,7 +16,8 @@
     "test": "semistandard && ava"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "regexps.json"
   ],
   "keywords": [
     ""
