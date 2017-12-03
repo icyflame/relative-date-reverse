@@ -8,47 +8,49 @@ var specialStrings = {
   'day before yesterday': -2 * dayMilliSeconds,
   'day after tomorrow': +2 * dayMilliSeconds
 };
+
 var periods = {
   'day': dayMilliSeconds,
   'week': 7 * dayMilliSeconds
 };
+
 var days = {
-  'Sun': 0,
-  'Mon': 1,
-  'Tues': 2,
-  'Tue': 2,
-  'Wednes': 3,
-  'Wed': 3,
-  'Thurs': 4,
-  'Fri': 5,
-  'Sat': 6,
-  'Satur': 6
+  'sun': 0,
+  'mon': 1,
+  'tues': 2,
+  'tue': 2,
+  'wednes': 3,
+  'wed': 3,
+  'thurs': 4,
+  'fri': 5,
+  'sat': 6,
+  'satur': 6
 };
 
 var months = {
-  'January': 0,
-  'Jan': 0,
-  'February': 1,
-  'Feb': 1,
-  'March': 2,
-  'Mar': 2,
-  'April': 3,
-  'Apr': 3,
-  'May': 4,
-  'June': 5,
-  'Jun': 5,
-  'July': 6,
-  'Jul': 6,
-  'August': 7,
-  'Aug': 7,
-  'September': 8,
-  'Sept': 8,
-  'October': 9,
-  'Oct': 9,
-  'November': 10,
-  'Nov': 10,
-  'December': 11,
-  'Dec': 11
+  'january': 0,
+  'jan': 0,
+  'february': 1,
+  'feb': 1,
+  'march': 2,
+  'mar': 2,
+  'april': 3,
+  'apr': 3,
+  'may': 4,
+  'june': 5,
+  'jun': 5,
+  'july': 6,
+  'jul': 6,
+  'august': 7,
+  'aug': 7,
+  'september': 8,
+  'sept': 8,
+  'october': 9,
+  'oct': 9,
+  'november': 10,
+  'nov': 10,
+  'december': 11,
+  'dec': 11
 };
 
 module.exports = function (str) {
@@ -56,8 +58,10 @@ module.exports = function (str) {
     throw new TypeError('Expected a string!');
   }
 
-  var defaultReturn = [false, ''];
+  var defaultReturn = [ false, '' ];
   var match;
+
+  str = str.toLowerCase();
 
   if (specialStrings.hasOwnProperty(str)) {
     return [true, getNewDate(specialStrings[str])];
