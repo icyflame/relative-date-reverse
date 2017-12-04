@@ -79,7 +79,11 @@ module.exports = function (str) {
     let day = match[1];
     let month = match[2];
 
-    return [true, new Date(new Date(new Date().setMonth(months[month])).setDate(day))];
+    let retVal = new Date();
+    retVal.setMonth(months[month]);
+    retVal.setDate(day);
+
+    return [true, retVal];
   }
 
   return defaultReturn;
