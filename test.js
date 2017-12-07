@@ -70,8 +70,7 @@ test('re1 works: n weeks ago', t => {
 
 });
 
-// TODO
-test.failing('re1 works: n months ago', t => {
+test('re1 works: n months ago', t => {
 
 	var returned = relative("5 months ago")
 	var expected = new Date();
@@ -89,7 +88,7 @@ test.failing('re1 works: n months ago', t => {
 
 });
 
-test.failing('re1 works: n years ago', t => {
+test('re1 works: n years ago', t => {
 
 	var returned = relative("5 years ago")
 	var expected = new Date();

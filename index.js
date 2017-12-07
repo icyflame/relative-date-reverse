@@ -68,7 +68,21 @@ module.exports = function (str) {
   } else if ((match = str.match(new RegExp(regexps['re1'], 'i')))) {
     let days = match[1];
     let period = match[2];
-
+    if (period === 'year') {
+      let year = new Date().getFullYear() - days;
+      if (year < 0) {
+        return 'Before B.C.';
+      } else {
+        let updatedVal = new Date();
+        updatedVal.setFullYear(year);
+        return [true, updatedVal];
+      }
+    } else if (period === 'month') {
+      let updatedVal = new Date();
+      let month = new Date().getMonth() - days;
+      updatedVal.setMonth(month);
+      return [true, updatedVal];
+    }
     return [true, getNewDate(-1 * parseInt(days, 10) * periods[period])];
   } else if ((match = str.match(new RegExp(regexps['re2'], 'i')))) {
     let day = match[1];
