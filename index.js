@@ -70,13 +70,9 @@ module.exports = function (str) {
     let period = match[2];
     if (period === 'year') {
       let year = new Date().getFullYear() - days;
-      if (year < 0) {
-        return 'Before B.C.';
-      } else {
-        let updatedVal = new Date();
-        updatedVal.setFullYear(year);
-        return [true, updatedVal];
-      }
+      let updatedVal = new Date();
+      updatedVal.setFullYear(year);
+      return [true, updatedVal];
     } else if (period === 'month') {
       let updatedVal = new Date();
       let month = new Date().getMonth() - days;
